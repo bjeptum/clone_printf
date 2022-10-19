@@ -3,6 +3,7 @@
 
 #include <stdlib.h>
 #include <stdarg.h>
+#include <unistd.h>
 
 /* 0-printf.c */
 
@@ -26,4 +27,14 @@ int print_char(va_list list);
 /* print string */
 int print_string(va_list list);
 
+/**
+ *
+ * @type: Format
+ * @f: The function associated
+ **/
+typedef struct _format
+{
+	char type;
+	int (*f)(va_list);
+} format;
 #endif/* MAIN_H */

@@ -27,6 +27,10 @@ int print_char(va_list list);
 /* print string */
 int print_string(va_list list);
 
+/* 2_print numbers*/
+int print_d(va_list d);
+int print_i(va_list i);
+
 /**
  * struct _format - Typedef struct
  * @type: the format

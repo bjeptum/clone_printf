@@ -7,7 +7,7 @@
 int _strlen(const char *str)
 {
 	int i = 0;
-	
+
 	for (; *str != '\0'; str++)
 	{
 		i++;
@@ -20,11 +20,10 @@ int _strlen(const char *str)
  * @str: string
  * Return: string length
  */
-
 int print(char *str)
 {
 	int i;
-	
+
 	for (i = 0; str[i] != '\0'; ++i)
 		_putchar(str[i]);
 	return (i);

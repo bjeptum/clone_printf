@@ -1,6 +1,6 @@
 #include  "main.h"
 /*
- * _printf - produces an output according to a format
+ *  _printf - produces an output according to a format
  * @format: character string
  *
  * Return: Number of characters printed (excluding

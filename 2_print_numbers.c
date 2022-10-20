@@ -1,79 +1,24 @@
 #include "main.h"
 
 /**
- * print_i - prints an integer
- * @i: integer to print
+ * print_i - prints a number in base 10
+ * @list: number to be printed
  *
- * Return: number of chars and digits printed
+ * Return: number of chars and digits in decimal
  */
-int print_i(va_list i)
+
+int print_i(va_list list)
 {
-	int a[10];
-	int j, m, n, sum, count;
+	char *p_buff;
+	int size;
 
-	n = va_arg(i, int);
-	count = 0;
-	m = 1000000000;
-	a[0] = n / m;
-	for (j = 1; j < 10; j++)
-	{
-		m /= 10;
-		a[j] = (n / m) % 10;
-	}
-	if (n < 0)
-	{
-		_putchar('-');
-		count++;
-		for (j = 0; j < 10; j++)
-			a[j] *= -1;
-	}
-	for (j = 0, sum = 0; j < 10; j++)
-	{
-		sum += a[j];
-		if (sum != 0 || j == 9)
-		{
-			_putchar('0' + a[j]);
-			count++;
-		}
-	}
-	return (count);
-}
+	p_buff = itoa(va_arg(list, int), 10);
 
-/**
- * print_d - prints a decimal
- * @d: decimal to print
- *
- * Return: number of chars and digits printed
- */
-int print_d(va_list d)
-{
-	int a[10];
-	int j, m, n, sum, count;
-
-	n = va_arg(d, int);
-	count = 0;
-	m = 1000000000;
-	a[0] = n / m;
-	for (j = 1; j < 10; j++)
+	if (p_buff == NULL)
+		p_buff = "(NULL)";
+	for (; p_buff[size]; size++)
 	{
-		m /= 10;
-		a[j] = (n / m) % 10;
+		_putchar(p_buff[size]);
 	}
-	if (n < 0)
-	{
-		_putchar('-');
-		count++;
-		for (j = 0; j < 10; j++)
-			a[j] *= -1;
-	}
-	for (j = 0, sum = 0; j < 10; j++)
-	{
-		sum += a[j];
-		if (sum != 0 || j == 9)
-		{
-			_putchar('0' + a[j]);
-			count++;
-		}
-	}
-	return (count);
+	return (size);
 }

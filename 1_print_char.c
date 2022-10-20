@@ -1,5 +1,5 @@
 #include "main.h"
-/*
+/**
  * print_char - print char
  * @list: va_list
  * Return: Always return 1

@@ -14,7 +14,7 @@ int handler(const char *str, va_list list);
 int percent_handler(const char *str, va_list list, int *i);
 
 /* utilities.c */
-int _strlen( const char *s);
+int _strlen(const char *s);
 
 /* putchar.c */
 
@@ -29,12 +29,13 @@ int print_string(va_list list);
 
 /**
  * struct _format - Typedef struct
- * @type: the format 
+ * @type: the format
  * @f: The function associated
- **/
+ */
 typedef struct _format
 {
 	char type;
 	int (*f)(va_list);
 } format;
+
 #endif/* MAIN_H */

@@ -13,9 +13,12 @@ int print_string(va_list list)
 	int p_len = 0;
 
 	p = va_arg(list, char*);
-	for (; *p != '\0'; p++)
+
+	if (p == NULL)
+		p = "(null)";
+	for (; p[p_len]; p_len++)
 	{
-		p_len++;
+		_putchar(p[p_len]);
 	}
 	return (p_len);
 }

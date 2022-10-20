@@ -30,6 +30,7 @@ int print_string(va_list list);
 /* 2_print numbers*/
 int print_d(va_list d);
 int print_i(va_list i);
+char *itoa(long int num, int base);
 
 /**
  * struct _format - Typedef struct

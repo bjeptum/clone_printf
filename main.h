@@ -28,8 +28,8 @@ int print_char(va_list list);
 int print_string(va_list list);
 
 /**
- *
- * @type: Format
+ * struct _format - Typedef struct
+ * @type: the format 
  * @f: The function associated
  **/
 typedef struct _format

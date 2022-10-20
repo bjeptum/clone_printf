@@ -13,7 +13,7 @@ int print_string(va_list list)
 	int p_len = 0;
 
 	p = va_arg(list, char*);
-	for (; *p != NULL; p++)
+	for (; *p != '\0'; p++)
 	{
 		p_len++;
 	}

@@ -15,6 +15,7 @@ int percent_handler(const char *str, va_list list, int *i);
 
 /* utilities.c */
 int _strlen(const char *s);
+char *itoa(long int, int);
 
 /* putchar.c */
 

@@ -15,7 +15,6 @@ int percent_handler(const char *str, va_list list, int *i);
 
 /* utilities.c */
 int _strlen(const char *s);
-char *itoa(long int, int);
 
 /* putchar.c */
 
@@ -27,10 +26,6 @@ int print_char(va_list list);
 
 /* print string */
 int print_string(va_list list);
-
-/* 2_print numbers*/
-int print_i(va_list list);
-char *itoa(long int num, int base);
 
 /**
  * struct _format - Typedef struct

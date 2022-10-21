@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * itoa - integer to ascii
+ * itoa - converts integer to ascii
  * @num: num
  * @base: base
  * Return: char

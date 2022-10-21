@@ -1,26 +1,59 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * print_i - prints a number in base 10
- * @list: number to be printed
- *
- * Return: number of chars and digits in decimal
+ * print_number - prints a number sent to this function
+ * @args: List of arguments
+ * Return: The number of arguments printed
  */
-
-int print_i(va_list list)
+int print_number(va_list args)
 {
-	char *p_buff;
-	int size = 0;
-
-	p_buff = itoa(va_arg(list, int), 10);
-	printf("p_buff is %d", p_buff);
-
-	if (p_buff == NULL)
-		p_buff = "(NULL)";
-	for (; p_buff[size]; size++)
+	int n;
+	int div;
+	int len;
+	unsigned int num;
+	
+	n = va_arg(args, int);
+	div = 1;
+	len = 0;
+	if (n < 0)
 	{
-		_putchar(p_buff[size]);
+		len += _write_char('-');
+		num = n * -1;
 	}
-	return (size);
+	else
+		num = n;
+	for (; num / div > 9; )
+		div *= 10;
+	for (; div != 0; )
+	{
+		len += _write_char('0' + num / div);
+		num %= div;
+		div /= 10;
+	}
+	return (len);
+}
+
+/**
+ * print_unsigned_number - Prints an unsigned number
+ * @n: unsigned integer to be printed
+ * Return: The amount of numbers printed
+ */
+int print_unsigned_number(unsigned int n)
+{
+	int div;
+	int len;
+	unsigned int num;
+	div = 1;
+	len = 0;
+	num = n;
+	
+	for (; num / div > 9; )
+		div *= 10;
+	for (; div != 0; )
+	{
+		len += _write_char('0' + num / div);
+		num %= div;
+		div /= 10;
+	}
+	return (len);
 }

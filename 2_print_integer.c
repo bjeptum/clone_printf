@@ -11,11 +11,6 @@ int print_integer(va_list list)
 	int size;
 
 	p_buff = itoa(va_arg(list, int), 10);
-	if (p_buff == NULL)
-		p_buff = "NULL";
-	for (; p_buff[size]; size++)
-	{
-		_putchar(p_buff[size]);
-	}
+	size = print((p_buff != NULL) ? p_buff : "NULL");
 	return (size);
 }

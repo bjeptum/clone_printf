@@ -34,7 +34,7 @@ int is_lowercase(char c)
 char *string_to_upper(char *s)
 {
 	int i;
-	
+
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (is_lowercase(s[i]))

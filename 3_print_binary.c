@@ -10,11 +10,6 @@ int print_binary(va_list list)
 	int size;
 
 	p_buff = itoa(va_arg(list, unsigned int), 2);
-	if (p_buff == NULL)
-		p_buff = "NULL";
-	for (; p_buff[size]; size++)
-	{
-		_putchar(p_buff[size]);
-	}
+	size = print(p_buff);
 	return (size);
 }

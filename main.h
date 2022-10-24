@@ -6,7 +6,6 @@
 #include <unistd.h>
 
 /* 0-printf.c */
-
 int _printf(const char *format, ...);
 
 /* handler.c */
@@ -19,7 +18,6 @@ char *itoa(long int, int);
 int print(char *);
 
 /* putchar.c */
-
 int _putchar(char c);
 int buffer(char c);
 
@@ -41,6 +39,7 @@ int print_rev_string(va_list);
  * @type: the format
  * @f: The function associated
  */
+
 typedef struct _format
 {
 	char type;
